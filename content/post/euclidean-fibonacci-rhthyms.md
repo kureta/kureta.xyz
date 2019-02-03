@@ -1,12 +1,15 @@
-+++
-date = "2018-09-28T21:00:00+00:00"
-image = "/img/2018/09/28/lindenmayer.jpeg"
-showonlyimage = false
-title = "Euclidean Rhythms and a Familiar Sequence"
-type = ""
-weight = ""
+---
+title: "Euclidean Rhythms and a Familiar Sequence"
+date: 2019-01-31T10:35:35-05:00
+description: "Euclidean rhythms are the answer to the question 'How can I fit n beats over m quantized pulses as equally spaced as possible?'"
+categories: ["Research"]
+featuredImage: "/img/2018/09/28/lindenmayer.jpeg"
+dropCap: true
+displayInMenu: false
+displayInList: true
+draft: false
+---
 
-+++
 A recursive definition of Euclidean rhythms and a familiar sequence.<!--more-->
 
 Euclidean rhythms are the answer to the question "How can I fit n beats over m quantized pulses as equally spaced as possible?" When you condense it down to a single sentence it might seem a bit complicated but the idea is very simple.

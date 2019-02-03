@@ -1,34 +1,12 @@
-baseurl = "https://kureta.xyz/"
-publishDir = "~/srv/kureta.xyz/"
-disqusShortname = "kureta-xyz"
-googleAnalytics = ""
-languageCode = "en-us"
-theme = "portfolio"
-title = "kureta.xyz"
+baseurl = "https://kureta.xyz"
+title = "Sahin Kureta - composer"
+author = "Sahin Kureta"
+canonifyurls = true
+paginate = 3
+theme = "aether"
+publishDir = "/home/kureta/srv/kureta.xyz"
+
 [params]
-copyright = "&copy;2017 Sahin Kureta"
-description = "Zak"
-email = "kureta@kureta.xyz"
-sidebarabout = ["I am a composer from Istanbul.", "Focusing on machine learning and its applications in music creation."]
-style = "default"
-[params.social]
-email = "kureta@kureta.xyz"
-facebook = "https://facebook.com/kureta"
-github = "https://github.com/kureta"
-googleplus = ""
-instagram = "https://instagram.com/skureta"
-linkedin = ""
-stackoverflow = "https://stackoverflow.com/users/310378/kureta"
-twitter = "https://twitter.com/skureta"
-[[params.navlinks]]
-name = "Home"
-url = ""
-[[params.navlinks]]
-name = "About"
-url = "about/"
-[[params.navlinks]]
-PygmentesStyle = "friendly"
-PygmentesUseClasses = false
-PygmentsCodeFences = true
-name = "Get in touch"
-url = "contact/"
+brand = "kureta"
+description = "A composer from Istanbul"
+bgimg = "img/ignasi_pattern_s.png"
