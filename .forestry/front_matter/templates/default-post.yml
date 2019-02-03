@@ -1,0 +1,46 @@
+---
+label: Default Post
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: title
+  description: Post's title
+  config:
+    required: true
+- type: datetime
+  name: date
+  label: date
+  description: Post's date
+  config:
+    date_format: YYYY/MM/DD
+    time_format: HH:mm ZZ
+    required: true
+- type: textarea
+  name: description
+  label: description
+  description: Post's description
+  config:
+    required: true
+- type: tag_list
+  name: categories
+  label: categories
+- type: file
+  label: Featured image
+  name: featuredImage
+  description: Post's featured image
+- type: boolean
+  name: dropCap
+  label: Drop capital
+  description: Used to determine if the first letter of a post should be a dropped
+    capital
+- type: boolean
+  name: displayInMenu
+  label: Display in menu
+  description: Whether you would like the post to show up in the navigation menu
+- type: boolean
+  label: Display in list
+  description: whether you would like the post to be listed on the home page and category
+    pages
+  name: displayInList
