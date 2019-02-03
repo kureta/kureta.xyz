@@ -44,3 +44,5 @@ fields:
   description: whether you would like the post to be listed on the home page and category
     pages
   name: displayInList
+pages:
+- content/post/test-post.md
