@@ -90,7 +90,7 @@ So, for any `euclid(a, b)` our final algorithm for calculating the rhthym in bea
 | 3 | 2 | **1** | 1 |
 | 2 | 1 | **2** | 0 |
 
-The list of numbers which we have to reduce over our operation `<-` using a right-fold is the continued fraction expansion of 8/3.
+`[2; 1, 2]`, the list of numbers which we have to reduce over our operation `<-` using a right-fold is the continued fraction expansion of 8/3.
 
 Now we can come up with a recursive definition for our `euclid(num_pulses, num_beats)`
 
@@ -220,7 +220,7 @@ Secondly, these rhythms are equivalent to:
     euclid(5, 8)
     euclid(8, 13)
 
-Yes, these are pairs of consecutive Fibonacci numbers! We have found an analog of the Fibonacci sequence within Euclidean rhythms. Since the limit of the ratio of two consecutive Fibonacci numbers approach the golden ratio, which is "maximally irrational" in a certain sense that is related to its continued fraction representation, these rhythms are also "maximally interesting" in a certain sense. The sequence can be extended infinitely and it will never repeat itself. This shouldn't be surprising, since `[1; 1, 1, 1, ...]` is the continued fraction expansion of the golden ratio $\phi$.
+Yes, these are pairs of consecutive Fibonacci numbers! We have found an analog of the Fibonacci sequence within Euclidean rhythms. Since the limit of the ratio of two consecutive Fibonacci numbers approach the golden ratio, which is "maximally irrational" in a certain sense that is related to its continued fraction representation, these rhythms are also "maximally interesting" in a certain sense. The sequence can be extended infinitely and it will never repeat itself. This shouldn't be surprising, since `[1; 1, 1, 1, ...]` is the continued fraction expansion of the golden ratio `phi`.
 
 It is also closely related to L-Systems. In fact it is identical to the first "deterministic, contentext-free L-System (DOL-System) in Lindenmayer's Book, [The Algorithmic Beauty of Plants](http://algorithmicbotany.org/papers/#abop). Just replace **a**s with **2**s and **b**s with **1**s.
 
