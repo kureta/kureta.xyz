@@ -81,8 +81,8 @@ We have already said that `[2, 2, 2]` is equivalent to `[2]`. We can simply writ
 So, for any `euclid(a, b)` our final algorithm for calculating the rhythm in beat notation is as follows:
 
 1. take the quotient and remainder of a/b
-2. if remainder is not 0 set a = b and b = remainder and repeat until remainder is 0.
-3. apply our operation to the list of all quotients starting from the end.
+2. if remainder is not 0 set a = b and b = remainder and repeat steps 1-2 until remainder is 0.
+3. apply our operation to the list of all quotients starting from the end (whic is also called a *right-fold*.
 
 | a | b | quotient | remainder|
 | --- | --- | --- | --- |
