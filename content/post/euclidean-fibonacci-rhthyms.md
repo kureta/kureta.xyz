@@ -78,7 +78,7 @@ euclid(2, 1) = [2]                        # remainder is zero, so this is an equ
 
 We have already said that `[2, 2, 2]` is equivalent to `[2]`. We can simply write those as `2`. Now `euclid(8, 3) = 2 <- (1 <- 2)`. 2 in pulse representation is `[1, 0]`, which means`1 <- 2 = [2, 1]` then `[2, 1]` in pulse representation is `[1, 0, 1]`, and `2 <- [2, 1] = [3, 2, 3]`. 
 
-So, for any `euclid(a, b)` our final algorithm for calculating the rhthym in beat notation is as follows:
+So, for any `euclid(a, b)` our final algorithm for calculating the rhythm in beat notation is as follows:
 
 1. take the quotient and remainder of a/b
 2. if remainder is not 0 set a = b and b = remainder and repeat until remainder is 0.
