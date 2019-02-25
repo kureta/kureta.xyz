@@ -1,15 +1,16 @@
 ---
-title: "Euclidean Rhythms and a Familiar Sequence"
-date: 2019-01-31T10:35:35-05:00
-description: "Euclidean rhythms are the answer to the question 'How can I fit n beats over m quantized pulses as equally spaced as possible?'"
-categories: ["Research"]
+title: Euclidean Rhythms and a Familiar Sequence
+date: 2019-01-31 15:35:35 +0000
+description: Euclidean rhythms are the answer to the question 'How can I fit n beats
+  over m quantized pulses as equally spaced as possible?'
+categories:
+- Research
 featuredImage: "/img/2018/09/28/lindenmayer.jpeg"
 dropCap: true
 displayInMenu: false
 displayInList: true
-draft: false
----
 
+---
 A recursive definition of Euclidean rhythms and a familiar sequence.<!--more-->
 
 Euclidean rhythms are the answer to the question "How can I fit n beats over m quantized pulses as equally spaced as possible?" When you condense it down to a single sentence it might seem a bit complicated but the idea is very simple.
@@ -65,11 +66,16 @@ my_rhythm = [3, 3, 2]
 
 It feels like we did not change much. Remember, Eucidean rhythms are actually cycles. So `[3, 2, 3]` is equal to `[3, 3, 2]`. So this is as equally spread as we can get given 8 pulses and 3 beats. Turns out Euclidean rhythms can be seen in lots of different types of music. You can just Google "Euclidean rhythms" or check out Godfried Toussaint’s paper, ["The Euclidean Algorithm Generates Traditional Musical Rhythms"](http://cgm.cs.mcgill.ca/\~godfried/publications/banff.pdf). If you are interested in more about the mathematical side of this you can search for Björklund's 2003 paper "The Theory of Rep-Rate Pattern Generation in the SNS Timing System". He is the one who discovered the algorith for generating Euclidean rhythms. By the what they are called that because the algorithm used to generate these rhythms is almost the same as Euclid's algorithm for finding the [greatest common divisor](https://en.wikipedia.org/wiki/Greatest_common_divisor) of two integers.
 
-So, how can we find the euclidean rhythm that corresponds to 3 beats in 8 pulses. We need a function `euclid(number_of_beats, number_of_pulses)` that will give us an euclidean rhythm given the number of beats and quantization of time. If we had 6 pulses it would have been very easy, as 6 can be divided into three, and we would have this beat pattern: `[2, 2, 2]`, which is actually equivalent to `[2]` since these rhythms are actually cycles, but that is not important right now. Anyways, since we are trying to divide 8 pulses into 3 beats, we still have a left over duration of 2 pulses. Now we have to find a way to equally spread this remaining 2 pulses over 3 beats. So, in order to solve `euclid(3, 8)`, we need to solve `euclid(2, 3)`. Let's cheat a bit. I will just tell you what `euclid(2, 3)` is. It is `[2, 1]` in beat representation, or `[1, 0, 1]` in pulse representation. It's pulse representation tells us how to evenly spread the remaining 2 pulses over `[2, 2, 2]` so that the resulting rhythm is 8 pulses long and as evenly spread as possible. Add the elements of the equal divisions beat representation to remaining Eculidean rhythms pulse representation. And the result is `[3, 2, 3]`.
+So, how can we find the euclidean rhythm that corresponds to 3 beats in 8 pulses. We need a function `euclid(number_of_pulses, number_of_beats)` that will give us an euclidean rhythm given the number of beats and quantization of time. If we had 6 pulses it would have been very easy, as 6 can be divided into three, and we would have this beat pattern: `[2, 2, 2]`, which is actually equivalent to `[2]` since these rhythms are actually cycles, but that is not important right now. Anyways, since we are trying to divide 8 pulses into 3 beats, we still have a left over duration of 2 pulses. Now we have to find a way to equally spread this remaining 2 pulses over 3 beats. So, in order to solve `euclid(8, 3)`, we need to solve `euclid(3, 2)`. Let's cheat a bit. I will just tell you what `euclid(3, 2)` is. It is `[2, 1]` in beat representation, or `[1, 0, 1]` in pulse representation. It's pulse representation tells us how to evenly spread the remaining 2 units of duration over 3 beats`[2, 2, 2]` so that the resulting rhythm is 8 pulses long and as evenly spread as possible. Add the elements of the equal divisions beat representation to remaining Eculidean rhythms pulse representation. And the result is `[3, 2, 3]`.
 
-Euclidean rhythm for 2 beats and 8 pulses is simply 8 / 2 = 4. Two beats of 4-pulses each `[4, 4]` or equivalently just `[4]`.
+| pulses | beats | quotient | remainder|
+| --- | --- | --- | --- |
+| 8 | 5 | 1 | 3 |
+| 5 | 3 | 1 | 2 |
+| 3 | 2 | 1 | 1 |
+| 2 | 1 | 2 | 0 |
 
-Now we can come up with a recursive definition for our `euclid(num_beats, num_pulses)`
+Now we can come up with a recursive definition for our `euclid(num_pulses, num_beats)`
 
     if number of beats equally divides number of pulses:
         Euclidean rhythm is just a single beat and its duration is the result of that division.
@@ -98,7 +104,7 @@ class Rhythm:
 ```
 
 ```python
-def spread_over_equal_division(rhythm, equal_div):
+def spread_over_equal_division(equal_div, rhythm):
     """Given an Euclidean rhytm, spreading it over an equal division is just adding its pulse representation
     to the equal division's beat representation."""
     return Rhythm([p + b for p, b in zip(rhythm.pulses, cycle([equal_div]))])
