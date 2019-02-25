@@ -66,14 +66,31 @@ my_rhythm = [3, 3, 2]
 
 It feels like we did not change much. Remember, Eucidean rhythms are actually cycles. So `[3, 2, 3]` is equal to `[3, 3, 2]`. So this is as equally spread as we can get given 8 pulses and 3 beats. Turns out Euclidean rhythms can be seen in lots of different types of music. You can just Google "Euclidean rhythms" or check out Godfried Toussaint’s paper, ["The Euclidean Algorithm Generates Traditional Musical Rhythms"](http://cgm.cs.mcgill.ca/\~godfried/publications/banff.pdf). If you are interested in more about the mathematical side of this you can search for Björklund's 2003 paper "The Theory of Rep-Rate Pattern Generation in the SNS Timing System". He is the one who discovered the algorith for generating Euclidean rhythms. By the what they are called that because the algorithm used to generate these rhythms is almost the same as Euclid's algorithm for finding the [greatest common divisor](https://en.wikipedia.org/wiki/Greatest_common_divisor) of two integers.
 
-So, how can we find the euclidean rhythm that corresponds to 3 beats in 8 pulses. We need a function `euclid(number_of_pulses, number_of_beats)` that will give us an euclidean rhythm given the number of beats and quantization of time. If we had 6 pulses it would have been very easy, as 6 can be divided into three, and we would have this beat pattern: `[2, 2, 2]`, which is actually equivalent to `[2]` since these rhythms are actually cycles, but that is not important right now. Anyways, since we are trying to divide 8 pulses into 3 beats, we still have a left over duration of 2 pulses. Now we have to find a way to equally spread this remaining 2 pulses over 3 beats. So, in order to solve `euclid(8, 3)`, we need to solve `euclid(3, 2)`. Let's cheat a bit. I will just tell you what `euclid(3, 2)` is. It is `[2, 1]` in beat representation, or `[1, 0, 1]` in pulse representation. It's pulse representation tells us how to evenly spread the remaining 2 units of duration over 3 beats`[2, 2, 2]` so that the resulting rhythm is 8 pulses long and as evenly spread as possible. Add the elements of the equal divisions beat representation to remaining Eculidean rhythms pulse representation. And the result is `[3, 2, 3]`.
+So, how can we find the euclidean rhythm that corresponds to 3 beats in 8 pulses. We need a function `euclid(number_of_pulses, number_of_beats)` that will give us an euclidean rhythm given the number of beats and quantization of time. If we had 6 pulses it would have been very easy, as 6 can be divided into three, and we would have this beat pattern: `[2, 2, 2]`, which is actually equivalent to `[2]` since these rhythms are actually cycles, but that is not important right now. Anyways, since we are trying to divide 8 pulses into 3 beats, we still have a left over duration of 2 pulses. Now we have to find a way to equally spread this remaining 2 pulses over 3 beats. So, in order to solve `euclid(8, 3)`, we need to solve `euclid(3, 2)`. Let's cheat a bit. I will just tell you what `euclid(3, 2)` is. It is `[2, 1]` in beat representation, or `[1, 0, 1]` in pulse representation. It's pulse representation tells us how to evenly spread the remaining 2 units of duration over 3 beats`[2, 2, 2]` so that the resulting rhythm is 8 pulses long and as evenly spread as possible. Add the elements of the equal divisions beat representation to remaining Eculidean rhythms pulse representation. And the result is `[3, 2, 3]`. This addition is equivalent to just adding 2 to each element of the pulse representation of `euclid(3, 2)`.
 
-| pulses | beats | quotient | remainder|
+We now have a `spread_over_equal_division` operation that spreads an euclid rhythm over an equal division (which is not at all different from a plain old integer). Let's give it a symbol `<-`. So, the above operation becomes `[2] <- euclid(3, 2)`. Let's recalculate `euclid(8, 3)` without cheating.
+
+`
+euclid(8, 3) = [2, 2, 2] <- euclid(3, 2)  # spread the remainder 2 over 3 beats
+euclid(3, 2) = [1, 1] <- euclid(2, 1)     # spread the remainder 1 over 2 beats  
+euclid(2, 1) = [2]                        # remainder is zero, so this is an equla division
+`
+
+We have already said that `[2, 2, 2]` is equivalent to `[2]`. We can simply write those as `2`. Now `euclid(8, 3) = 2 <- (1 <- 2)`. 2 in pulse representation is `[1, 0]`, which means`1 <- 2 = [2, 1]` then `[2, 1]` in pulse representation is `[1, 0, 1]`, and `2 <- [2, 1] = [3, 2, 3]`. 
+
+So, for any `euclid(a, b)` our final algorithm for calculating the rhthym in beat notation is as follows:
+
+1. take the quotient and remainder of a/b
+2. if remainder is not 0 set a = b and b = remainder and repeat until remainder is 0.
+3. apply our operation to the list of all quotients starting from the end.
+
+| a | b | quotient | remainder|
 | --- | --- | --- | --- |
-| 8 | 5 | 1 | 3 |
-| 5 | 3 | 1 | 2 |
-| 3 | 2 | 1 | 1 |
-| 2 | 1 | 2 | 0 |
+| 8 | 3 | **2** | 2 |
+| 3 | 2 | **1** | 1 |
+| 2 | 1 | **2** | 0 |
+
+The list of numbers which we have to reduce over our operation `<-` using a right-fold is the continued fraction expansion of 8/3.
 
 Now we can come up with a recursive definition for our `euclid(num_pulses, num_beats)`
 
@@ -203,7 +220,9 @@ Secondly, these rhythms are equivalent to:
     euclid(5, 8)
     euclid(8, 13)
 
-Yes, these are pairs of consecutive Fibonacci numbers! We have found an analog of the Fibonacci sequence within Euclidean rhythms. Since the limit of the ratio of two consecutive Fibonacci numbers approach the golden ratio, which is "maximally irrational" in a certain sense that is related to its continued fraction representation, these rhythms are also "maximally interesting" in a certain sense. The sequence can be extended infinitely and it will never repeat itself. It is also closely related to L-Systems. In fact it is identical to the first "deterministic, contentext-free L-System (DOL-System) in Lindenmayer's Book, [The Algorithmic Beauty of Plants](http://algorithmicbotany.org/papers/#abop). Just replace **a**s with **2**s and **b**s with **1**s.
+Yes, these are pairs of consecutive Fibonacci numbers! We have found an analog of the Fibonacci sequence within Euclidean rhythms. Since the limit of the ratio of two consecutive Fibonacci numbers approach the golden ratio, which is "maximally irrational" in a certain sense that is related to its continued fraction representation, these rhythms are also "maximally interesting" in a certain sense. The sequence can be extended infinitely and it will never repeat itself. This shouldn't be surprising, since `[1; 1, 1, 1, ...]` is the continued fraction expansion of the golden ratio $\phi$.
+
+It is also closely related to L-Systems. In fact it is identical to the first "deterministic, contentext-free L-System (DOL-System) in Lindenmayer's Book, [The Algorithmic Beauty of Plants](http://algorithmicbotany.org/papers/#abop). Just replace **a**s with **2**s and **b**s with **1**s.
 
 Interestingly, the way he generates the same sequence has nothing to do with Bjorklund's or Euclid's algorithm, Greatest Common Divisors, or concatanation of strings. The rule he uses to generate the same sequence, translated to **1**s and **2**s, is:
 
