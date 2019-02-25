@@ -155,10 +155,10 @@ music21.converter.parse("tinynotation: c4 c8 c4 c4 c8").show()
 
 ![](/img/2018/09/28/Fibonacci Rhythms_26_0.png)
 
-Now, apart from being able to generate Euclidean rhythms from a pair of integers, number of beats and number of pulses, we have another toy to play with; our `spread_over_equal_division(rhythm, equal_div)` function. First thing that came to my mind when I implemented this recursive version of the Bjorklund's algorithm was to generate Euclidean rhythms from the simplest building blocks in terms of this function. The simplest Euclidean rhythm, which is also an equal division, is `[1]`. Not very exciting. But we can generate infintely many Euclidean rhythms using just `[1]` as our seed, and the `spread_over_equal_division(rhythm, equal_div)` function, like this:
+Now, apart from being able to generate Euclidean rhythms from a pair of integers, number of beats and number of pulses, we have another toy to play with; our `spread_over_equal_division(equal_div, rhythm)` function. First thing that came to my mind when I implemented this recursive version of the Bjorklund's algorithm was to generate Euclidean rhythms from the simplest building blocks in terms of this function. The simplest Euclidean rhythm, which is also an equal division, is `[1]`. Not very exciting. But we can generate infintely many Euclidean rhythms using just `[1]` as our seed, and the `spread_over_equal_division(equal_div, rhythm)` function, like this:
 
 ```python
-next_rhythm = spread_over_equal_division(Rhythm([1]), 1)
+next_rhythm = spread_over_equal_division(1, Rhythm([1]))
 next_rhythm
 ```
 
@@ -167,7 +167,7 @@ next_rhythm
 Still nothing too exciting. Just an equal division. Let's go on anyway. Spread this rhythm over 1.
 
 ```python
-next_rhythm = spread_over_equal_division(next_rhythm, 1)
+next_rhythm = spread_over_equal_division(1, next_rhythm)
 next_rhythm
 ```
 
@@ -176,7 +176,7 @@ next_rhythm
 Slightly more exiting. At least has some variation. Let's do that again.
 
 ```python
-next_rhythm = spread_over_equal_division(next_rhythm, 1)
+next_rhythm = spread_over_equal_division(1, next_rhythm)
 next_rhythm
 ```
 
@@ -185,7 +185,7 @@ next_rhythm
 And again...
 
 ```python
-next_rhythm = spread_over_equal_division(next_rhythm, 1)
+next_rhythm = spread_over_equal_division(1, next_rhythm)
 next_rhythm
 ```
 
@@ -194,7 +194,7 @@ next_rhythm
 One last time...
 
 ```python
-next_rhythm = spread_over_equal_division(next_rhythm, 1)
+next_rhythm = spread_over_equal_division(1, next_rhythm)
 next_rhythm
 ```
 
@@ -214,11 +214,11 @@ First off, notice every entry is the concatenation of previous two entries. Hmmm
 Secondly, these rhythms are equivalent to:
 
     euclid(1, 1)
-    euclid(1, 2)
-    euclid(2, 3)
-    euclid(3, 5)
-    euclid(5, 8)
-    euclid(8, 13)
+    euclid(2, 1)
+    euclid(3, 2)
+    euclid(5, 3)
+    euclid(8, 5)
+    euclid(13, 8)
 
 Yes, these are pairs of consecutive Fibonacci numbers! We have found an analog of the Fibonacci sequence within Euclidean rhythms. Since the limit of the ratio of two consecutive Fibonacci numbers approach the golden ratio, which is "maximally irrational" in a certain sense that is related to its continued fraction representation, these rhythms are also "maximally interesting" in a certain sense. The sequence can be extended infinitely and it will never repeat itself. This shouldn't be surprising, since `[1; 1, 1, 1, ...]` is the continued fraction expansion of the golden ratio `phi`.
 
@@ -226,8 +226,8 @@ It is also closely related to L-Systems. In fact it is identical to the first "d
 
 Interestingly, the way he generates the same sequence has nothing to do with Bjorklund's or Euclid's algorithm, Greatest Common Divisors, or concatanation of strings. The rule he uses to generate the same sequence, translated to **1**s and **2**s, is:
 
-    2 -> 21
-    1 -> 2
+    2 => 21
+    1 => 2
 
 Starting with 1 and replacing everything according to above rules yields:
 
