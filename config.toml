@@ -3,7 +3,7 @@ title = "Sahin Kureta - composer"
 author = "Sahin Kureta"
 canonifyurls = true
 paginate = 10
-theme = "hugo-swift-theme"
+theme = "aether"
 publishDir = "/home/kureta/srv/kureta.xyz"
 
 [params]
