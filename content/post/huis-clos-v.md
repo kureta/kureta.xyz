@@ -4,7 +4,6 @@ date = "2019-05-12T21:00:00+00:00"
 description = "I have created and Audioreactive Generative Adverserial Network for Istanbul Composers Collective's live performance, Huis Clos V, at Akademie der Kuenste, Berlin."
 displayInList = true
 displayInMenu = false
-draft = true
 dropCap = false
 featuredImage = "/uploads/hqdefault (1).jpg"
 title = "Huis Clos V"
