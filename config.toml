@@ -2,7 +2,7 @@ baseurl = "https://kureta.xyz"
 title = "Sahin Kureta - composer"
 author = "Sahin Kureta"
 canonifyurls = true
-paginate = 3
+paginate = 10
 theme = "aether"
 publishDir = "/home/kureta/srv/kureta.xyz"
 
