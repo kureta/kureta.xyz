@@ -5,7 +5,6 @@ description = "I have filmed and directed a short video for ICC composer Emre Du
 displayInList = true
 displayInMenu = false
 dropCap = false
-featuredImage = "/uploads/hqdefault.jpg"
 title = "De Vulgari Eloquentia"
 [[resources]]
 name = "featuredImage"

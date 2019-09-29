@@ -5,7 +5,12 @@ description: Euclidean rhythms are the answer to the question 'How can I fit n b
   over m quantized pulses as equally spaced as possible?'
 categories:
 - Research
-featuredImage: "/img/2018/09/28/lindenmayer.jpeg"
+
+[[resources]]
+name = "featuredImage"
+src = "lindenmayer.jpeg"
+template = "resources"
+
 dropCap: true
 displayInMenu: false
 displayInList: true

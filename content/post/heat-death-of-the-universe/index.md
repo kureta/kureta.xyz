@@ -5,8 +5,12 @@ description = "As we grow older, we strive for order, stability, and equilibrium
 displayInList = true
 displayInMenu = false
 dropCap = false
-featuredImage = "/uploads/hqdefault (2).jpg"
 title = "Heat Death of the Universe"
+
+[[resources]]
+name = "featuredImage"
+src = "hqdefault (2).jpg"
+template = "resources"
 
 +++
 As we grow older, we strive for order, stability, and equilibrium in our lives, sometimes at the expense of change, progress, and motion. Here is my short video and fixed-media piece "Heat Death of the Universe", first installment of my Stasis Trilogy.

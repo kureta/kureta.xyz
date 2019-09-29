@@ -5,8 +5,12 @@ description = "My presentation on Recent Developments in Deep Learning and Their
 displayInList = true
 displayInMenu = false
 dropCap = false
-featuredImage = "/uploads/de90a3200b88edc111a6a0a94bedad74.jpg"
 title = "Recent Developments in Deep Learning and Their Possible Applications in Music @IRCAM"
+
+[[resources]]
+name = "featuredImage"
+src = "de90a3200b88edc111a6a0a94bedad74.jpg"
+template = "resources"
 
 +++
 My presentation on Recent Developments in Deep Learning and Their Possible Applications in Music at IRCAM.

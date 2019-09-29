@@ -5,8 +5,12 @@ description = "I have created and Audioreactive Generative Adverserial Network f
 displayInList = true
 displayInMenu = false
 dropCap = false
-featuredImage = "/uploads/hqdefault (1).jpg"
 title = "Huis Clos V"
+
+[[resources]]
+name = "featuredImage"
+src = "hqdefault (1).jpg"
+template = "resources"
 
 +++
 ![](/uploads/hqdefault (1).jpg)Huis Clos V / Improvisation performance with synthesizers, samplers and live video.
