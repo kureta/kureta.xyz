@@ -47,9 +47,3 @@ fields:
   config:
     min: 
     max: 
-pages:
-- content/post/de-vulgari-eloquentia.md
-- content/post/heat-death-of-the-universe.md
-- content/post/huis-clos-v.md
-- content/post/recent-developments-in-deep-learning-and-their-possible-applications-in-music-ircam.md
-- content/post/test-post.md
