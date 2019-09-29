@@ -1,4 +1,15 @@
 ---
 label: resources
 hide_body: true
-fields: []
+fields:
+- name: name
+  type: text
+  config:
+    required: false
+  label: name
+  default: featuredImage
+- name: src
+  type: file
+  config:
+    maxSize: 250
+  label: src
