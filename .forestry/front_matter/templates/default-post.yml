@@ -43,14 +43,6 @@ fields:
   description: whether you would like the post to be listed on the home page and category
     pages
   name: displayInList
-- name: resources
-  type: blocks
-  label: resources
-  template_types:
-  - resources
-  config:
-    min: 
-    max: 
 pages:
 - content/post/de-vulgari-eloquentia.md
 - content/post/heat-death-of-the-universe.md
