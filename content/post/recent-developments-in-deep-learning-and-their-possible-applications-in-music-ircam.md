@@ -4,7 +4,6 @@ date = "2018-03-07T21:00:00+00:00"
 description = "My presentation on Recent Developments in Deep Learning and Their Possible Applications in Music at IRCAM."
 displayInList = true
 displayInMenu = false
-draft = true
 dropCap = false
 featuredImage = "/uploads/de90a3200b88edc111a6a0a94bedad74.jpg"
 title = "Recent Developments in Deep Learning and Their Possible Applications in Music @IRCAM"
