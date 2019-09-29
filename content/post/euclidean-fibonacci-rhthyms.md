@@ -1,6 +1,6 @@
 ---
 title: Euclidean Rhythms and a Familiar Sequence
-date: 2019-01-31 15:35:35 +0000
+date: 2019-01-31T15:35:35.000+00:00
 description: Euclidean rhythms are the answer to the question 'How can I fit n beats
   over m quantized pulses as equally spaced as possible?'
 categories:
@@ -9,6 +9,7 @@ featuredImage: "/img/2018/09/28/lindenmayer.jpeg"
 dropCap: true
 displayInMenu: false
 displayInList: true
+draft: true
 
 ---
 A recursive definition of Euclidean rhythms and a familiar sequence.<!--more-->
