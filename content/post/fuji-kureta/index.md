@@ -1,6 +1,6 @@
 +++
 categories = []
-date = "2019-08-31T21:00:00+00:00"
+date = "2016-12-20T21:00:00+00:00"
 description = "Our last album as I started to dive deep into more abstract techniques"
 displayInList = true
 displayInMenu = false
