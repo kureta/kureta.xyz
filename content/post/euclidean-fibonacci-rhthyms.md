@@ -9,6 +9,7 @@ featuredImage: "/img/2018/09/28/lindenmayer.jpeg"
 dropCap: true
 displayInMenu: false
 displayInList: true
+draft: true
 
 ---
 A recursive definition of Euclidean rhythms and a familiar sequence.<!--more-->
