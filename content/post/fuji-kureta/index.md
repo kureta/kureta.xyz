@@ -1,7 +1,7 @@
 +++
 categories = []
 date = "2019-08-31T21:00:00+00:00"
-description = "Our last recording as I started to dive deep into more abstract techniques"
+description = "Our last album as I started to dive deep into more abstract techniques"
 displayInList = true
 displayInMenu = false
 dropCap = false
