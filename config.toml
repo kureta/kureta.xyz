@@ -3,10 +3,11 @@ title = "Sahin Kureta - composer"
 author = "Sahin Kureta"
 canonifyurls = true
 paginate = 10
-theme = "aether"
+theme = "hugo-swift-theme"
 publishDir = "/home/kureta/srv/kureta.xyz"
 
 [params]
 brand = "kureta"
 description = "A composer from Istanbul"
 bgimg = "img/ignasi_pattern_s.png"
+
