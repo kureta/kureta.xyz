@@ -10,9 +10,4 @@ featuredImage = "/uploads/hqdefault.jpg"
 title = "De Vulgari Eloquentia"
 
 +++
-<!-- blank line -->
-<figure class="video_container">
-  <iframe src="https://www.youtube.com/embed/-SsK9YTlXRw" frameborder="0" allowfullscreen="true"> </iframe>
-</figure>
-<!-- blank line -->
-
+<!-- blank line --> <figure class="video_container"> <iframe src="https://www.youtube.com/embed/-SsK9YTlXRw" width="560" height="315" frameborder="0" allowfullscreen="true"> </iframe> </figure> <!-- blank line -->
