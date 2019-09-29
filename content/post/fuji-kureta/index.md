@@ -18,6 +18,6 @@ The track Kyrie, which is a sort of intermezzo of the album, is a reordering of 
 
 Last track, Bohlen is a superposition of 12-tone equal temperament and the Bohlen-Pierce tuining system.
 
-The album includes other ideas based on the spectrum of sound, statistical models applied on notes or spectra of audio signals, etc. With the release of this album, I have moved on to more serious forms but I am still proud of what I and my wife have managed to incorporate in this album.
+The album includes other ideas based on the spectrum of sound, statistical models applied on notes or spectra of audio signals, etc.
 
 <iframe src="https://open.spotify.com/embed/album/5wODFl2JX9YuzzVEVaSgAD" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
