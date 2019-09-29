@@ -6,9 +6,6 @@ displayInList = true
 displayInMenu = false
 dropCap = false
 featuredImage = "/uploads/hqdefault (2).jpg"
-resources:
-- name: featuredImage
-  src: "/uploads/hqdefault (2).jpg"
 title = "Heat Death of the Universe"
 
 +++
