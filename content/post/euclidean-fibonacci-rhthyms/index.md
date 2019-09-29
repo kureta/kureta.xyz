@@ -6,10 +6,10 @@ description: Euclidean rhythms are the answer to the question 'How can I fit n b
 categories:
 - Research
 
-[[resources]]
-name = "featuredImage"
-src = "lindenmayer.jpeg"
-template = "resources"
+resources:
+- name: "featuredImage"
+  src: "lindenmayer.jpeg"
+  template: "resources"
 
 dropCap: true
 displayInMenu: false
