@@ -44,4 +44,5 @@ fields:
     pages
   name: displayInList
 pages:
+- content/post/de-vulgari-eloquentia.md
 - content/post/test-post.md
