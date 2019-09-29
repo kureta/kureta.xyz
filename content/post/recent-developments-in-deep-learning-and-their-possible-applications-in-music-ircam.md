@@ -13,6 +13,6 @@ My presentation on Recent Developments in Deep Learning and Their Possible Appli
 
 <!-- blank line -->
 <figure class="video_container">
-  <iframe src="https://medias.ircam.fr/embed/media/x7c25d7" width="560" height="315" frameborder="0" allowfullscreen="true">
-  </iframe>
+<iframe src="https://medias.ircam.fr/embed/media/x7c25d7" width="560" height="315" frameborder="0" allowfullscreen="true">
+</iframe>
 </figure> <!-- blank line -->
