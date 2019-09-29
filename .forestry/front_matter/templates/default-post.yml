@@ -44,5 +44,6 @@ fields:
     pages
   name: displayInList
 pages:
+- content/post/huis-clos-v.md
 - content/post/de-vulgari-eloquentia.md
 - content/post/test-post.md
