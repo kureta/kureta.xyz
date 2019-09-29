@@ -7,6 +7,10 @@ displayInMenu = false
 dropCap = false
 featuredImage = "/uploads/hqdefault.jpg"
 title = "De Vulgari Eloquentia"
+[[resources]]
+name = "featuredImage"
+src = "/uploads/hqdefault.jpg"
+template = "resources"
 
 +++
 De Vulgari Eloquentia (2017) for composer himself, pre-recorded instruments and electronics Vocals/Programming/Clarinet/Alto Sax: Emre Dündar Bass Recorder/trumpet/ percussions: M.A.Uzunselvi Violin: Mithatcan Öcal Mandolin: Şükret Gökay Processed Contrabass/ Bass Guitar: Şahin Kureta
