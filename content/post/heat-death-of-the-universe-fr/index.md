@@ -5,7 +5,7 @@ description = "En vieillissant, nous recherchons l’ordre, la stabilité et l�
 displayInList = true
 displayInMenu = false
 dropCap = false
-title = "La Mort thermique de l’univers"
+title = "Heat Death of the Universe"
 
 [[resources]]
 name = "featuredImage"
