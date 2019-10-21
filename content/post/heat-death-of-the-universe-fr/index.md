@@ -1,7 +1,7 @@
 +++
 categories = []
-date = "2019-10-21T14:00:00+00:00"
-description = "En vieillissant, nous recherchons l’ordre, la stabilité et l’équilibre dans nos vies, parfois au détriment du changement, du progrès et du mouvement. Voici ma courte vidéo et ma pièce sur média fixe « Heat Death of the Universe » (La Mort thermique de l’univers ) ; premier volet de ma trilogie Stasis."
+date = "2019-09-28T21:00:00+00:00"
+description = "As we grow older, we strive for order, stability, and equilibrium in our lives, sometimes at the expense of change, progress, and motion. Here is my short video and fixed-media piece \"Heat Death of the Universe\", first installment of my Stasis Trilogy."
 displayInList = true
 displayInMenu = false
 dropCap = false
