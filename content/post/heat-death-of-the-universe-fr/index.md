@@ -1,6 +1,6 @@
 +++
 categories = []
-date = "2019-09-28T21:00:00+00:00"
+date = "2019-10-21T14:00:00+00:00"
 description = "En vieillissant, nous recherchons l’ordre, la stabilité et l’équilibre dans nos vies, parfois au détriment du changement, du progrès et du mouvement. Voici ma courte vidéo et ma pièce sur média fixe « Heat Death of the Universe » (La Mort thermique de l’univers ) ; premier volet de ma trilogie Stasis."
 displayInList = true
 displayInMenu = false
