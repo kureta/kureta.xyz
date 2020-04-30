@@ -11,3 +11,5 @@ brand = "kureta"
 description = "A composer from Istanbul"
 bgimg = "img/ignasi_pattern_s.png"
 
+[markup.goldmark.renderer]
+unsafe= true
