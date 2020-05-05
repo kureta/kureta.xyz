@@ -19,3 +19,5 @@ When people are at the early stages of their lives, as they are not yet lulled i
 I have likened their situation to the concept known as _the heat death of the universe_. Every interesting or exciting event in the universe happens not due to energy, but a difference in energy. When a mass of very warm air meets a mass of cold air, that creates turbulence. During this initial period they swirl into each other and create a plethora of interesting patterns. However, as time passes, temperatures of the two masses equalize. They settle down. After the thermal equilibrium is reached, nothing interesting happens ever again. Heat death of the universe is the same thing, but on a universal scale. When every star depletes all of its fuel, when every piece of matter reaches thermal equilibrium, when there is no energy difference, no useful energy, the universe will turn into a lukewarm, dark, lifeless place, and stay like that until the end of time.
 
 This experimental short film, “Heat Death of the Universe” is the first installment of my Stasis Trilogy.
+
+{{< youtube id="b1B94Dy5eB4" >}}
