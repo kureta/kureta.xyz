@@ -13,7 +13,7 @@ src = "hqdefault (1).jpg"
 template = "resources"
 
 +++
-![](/uploads/hqdefault (1).jpg)Huis Clos V / Improvisation performance with synthesizers, samplers and live video.
+Huis Clos V / Improvisation performance with synthesizers, samplers and live video.
 
 Performers:
 Emre Dündar
