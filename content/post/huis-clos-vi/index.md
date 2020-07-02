@@ -4,7 +4,6 @@ date = 2020-07-03T21:00:00Z
 description = "Newest version of my Audioreactive Generative Adverserial Network for Istanbul Composers Collective's live performance, Huis Clos VI, at Arter, Istanbul."
 displayInList = true
 displayInMenu = false
-draft = true
 dropCap = false
 title = "Huis Clos VI"
 [[resources]]
