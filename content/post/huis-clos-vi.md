@@ -12,10 +12,17 @@ src = "/uploads/screenshot-from-2020-07-03-02-37-52.png"
 template = "resources"
 
 +++
-Huis Clos VI / Improvisation performance with synthesizers, samplers and live video, at [Arter, Istanbul](https://www.arter.org.tr/).
+Huis Clos VI / Improvisation performance with synthesizers, samplers and live video, at Arter, Istanbul.
 
-Performers: Emre Dündar Mehmet Ali Uzunselvi Mithatcan Öcal Onur Dülger
+Performers:
+Emre Dündar
+Mehmet Ali Uzunselvi
+Mithatcan Öcal
+Onur Dülger
 
-Video and programming: Şahin Kureta
+Video and programming:
+Şahin Kureta
 
-<!-- blank line --> <figure class="video_container"> <iframe width="560" height="315" src="[https://www.youtube.com/embed/VfTmGncCO-k](https://www.youtube.com/embed/VfTmGncCO-k "https://www.youtube.com/embed/VfTmGncCO-k")" frameborder="0" allowfullscreen="true"> </iframe> </figure> <!-- blank line -->
+<!-- blank line -->
+<figure class="video_container"> <iframe width="560" height="315" src="https://www.youtube.com/embed/VfTmGncCO-k" frameborder="0" allowfullscreen="true"> </iframe> </figure>
+<!-- blank line -->
