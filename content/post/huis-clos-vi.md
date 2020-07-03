@@ -5,11 +5,8 @@ description = "Newest version of my Audioreactive Generative Adverserial Network
 displayInList = true
 displayInMenu = false
 dropCap = false
+resources = []
 title = "Huis Clos VI"
-[[resources]]
-name = "featuredImage"
-src = "/uploads/screenshot-from-2020-07-03-02-37-52.png"
-template = "resources"
 
 +++
 Huis Clos VI / Improvisation performance with synthesizers, samplers and live video, at Arter, Istanbul.
