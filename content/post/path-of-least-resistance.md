@@ -9,4 +9,4 @@ resources = []
 title = "Path of Least Resistance"
 
 +++
-Hello?
+<iframe title="vimeo-player" src="[https://player.vimeo.com/video/531182122](https://player.vimeo.com/video/531182122 "https://player.vimeo.com/video/531182122")" width="640" height="360" frameborder="0" allowfullscreen></iframe>
